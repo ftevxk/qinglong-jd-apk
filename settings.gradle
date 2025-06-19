@@ -1,12 +1,11 @@
 pluginManagement {
     repositories {
         maven { url "https://jitpack.io" }
-        maven { url 'https://maven.aliyun.com/repository/releases' }
-        maven { url 'https://maven.aliyun.com/repository/jcenter' }
-        maven { url 'https://maven.aliyun.com/repository/google' }
-        maven { url 'https://maven.aliyun.com/repository/central' }
-        maven { url 'https://maven.aliyun.com/repository/gradle-plugin' }
         maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://oss.sonatype.org/content/repositories/snapshots/' }
+        maven { url 'https://mirrors.tencent.com/nexus/repository/maven-public/' }
         google()
         mavenCentral()
         gradlePluginPortal()
