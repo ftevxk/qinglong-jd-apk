@@ -32,7 +32,7 @@ public class App extends Application {
 
     private void initApp() {
         sharedPreferences = getSharedPreferences(QL_DATA_FILE_NAME, MODE_PRIVATE);
-        String url = sharedPreferences.getString("url", "http://ql.free.idcfengye.com");
+        String url = sharedPreferences.getString("url", "http://kwrt.ftevxk.site:5700");
         String cid = sharedPreferences.getString("cid", "f7kMA-5m_vmW");
         String csk = sharedPreferences.getString("csk", "sPO3x8Vg3i0Y240TmMzrAu-H");
 
