@@ -33,8 +33,8 @@ public class App extends Application {
     private void initApp() {
         sharedPreferences = getSharedPreferences(QL_DATA_FILE_NAME, MODE_PRIVATE);
         String url = sharedPreferences.getString("url", "https://ql.ftevxk.site");
-        String cid = sharedPreferences.getString("cid", "f7kMA-5m_vmW");
-        String csk = sharedPreferences.getString("csk", "sPO3x8Vg3i0Y240TmMzrAu-H");
+        String cid = sharedPreferences.getString("cid", "3yRFZ4Io8Vf_");
+        String csk = sharedPreferences.getString("csk", "sag_ZyYPuKjH72eORxRyzCxH");
 
         String tokenType = sharedPreferences.getString("token_type", "Bearer");
         String token = sharedPreferences.getString("token", "");

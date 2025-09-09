@@ -34,40 +34,46 @@ public class QLLoginActivity extends AppCompatActivity implements View.OnClickLi
 
 
         binding.qlLogin.setOnClickListener(this);
+        binding.qlHost1.setOnClickListener(this);
+        binding.qlHost2.setOnClickListener(this);
     }
-
-
 
 
     @Override
     public void onClick(View v) {
-        String url = binding.qlUrl.getText().toString();
-        String cid = binding.qlCid.getText().toString();
-        String csk = binding.qlCsk.getText().toString();
+        if (v == binding.qlHost1) {
+            binding.qlUrl.setText(binding.qlHost1.getText());
+        } else if (v == binding.qlHost2) {
+            binding.qlUrl.setText(binding.qlHost2.getText());
+        } else if (v == binding.qlLogin) {
+            String url = binding.qlUrl.getText().toString();
+            String cid = binding.qlCid.getText().toString();
+            String csk = binding.qlCsk.getText().toString();
 
-        new Thread() {
-            @Override
-            public void run() {
-                try {
-                    QLLoginData login = sdk.login(url, cid, csk);
+            new Thread() {
+                @Override
+                public void run() {
+                    try {
+                        QLLoginData login = sdk.login(url, cid, csk);
 
 
-                    runOnUiThread(() -> {
-                        Toast.makeText(getApplication(), "登录成功", Toast.LENGTH_SHORT).show();
+                        runOnUiThread(() -> {
+                            Toast.makeText(getApplication(), "登录成功", Toast.LENGTH_SHORT).show();
 
-                        QLSettingsData settingsData = new QLSettingsData(url, cid, csk);
+                            QLSettingsData settingsData = new QLSettingsData(url, cid, csk);
 
-                        App.storeQLData(settingsData, login);
+                            App.storeQLData(settingsData, login);
 
-                        setResult(Activity.RESULT_OK);
-                        finish();
-                    });
+                            setResult(Activity.RESULT_OK);
+                            finish();
+                        });
 
-                } catch (Exception e) {
-                    runOnUiThread(() -> Toast.makeText(getApplication(), e.getMessage(), Toast.LENGTH_SHORT).show());
-                    e.printStackTrace();
+                    } catch (Exception e) {
+                        runOnUiThread(() -> Toast.makeText(getApplication(), e.getMessage(), Toast.LENGTH_SHORT).show());
+                        e.printStackTrace();
+                    }
                 }
-            }
-        }.start();
+            }.start();
+        }
     }
 }

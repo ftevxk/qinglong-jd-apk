@@ -1,7 +1,7 @@
 package cn.moon.ql;
 
 public enum SiteType {
-    JD("https://m.jd.com","JD_COOKIE");
+    JD("https://my.m.jd.com","JD_COOKIE");
 
     private String url;
     private String env; // 青龙环境变量
