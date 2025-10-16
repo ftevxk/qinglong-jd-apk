@@ -59,6 +59,13 @@
         android:id="@+id/ql_host1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:text="http://100.81.86.128:5700"
+        android:textAllCaps="false" />
+
+    <Button
+        android:id="@+id/ql_host3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:text="http://192.168.10.1:5700"
         android:textAllCaps="false" />
 </LinearLayout>

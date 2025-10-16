@@ -36,6 +36,7 @@ public class QLLoginActivity extends AppCompatActivity implements View.OnClickLi
         binding.qlLogin.setOnClickListener(this);
         binding.qlHost1.setOnClickListener(this);
         binding.qlHost2.setOnClickListener(this);
+        binding.qlHost3.setOnClickListener(this);
     }
 
 
@@ -45,6 +46,8 @@ public class QLLoginActivity extends AppCompatActivity implements View.OnClickLi
             binding.qlUrl.setText(binding.qlHost1.getText());
         } else if (v == binding.qlHost2) {
             binding.qlUrl.setText(binding.qlHost2.getText());
+        } else if (v == binding.qlHost3) {
+            binding.qlUrl.setText(binding.qlHost3.getText());
         } else if (v == binding.qlLogin) {
             String url = binding.qlUrl.getText().toString();
             String cid = binding.qlCid.getText().toString();
